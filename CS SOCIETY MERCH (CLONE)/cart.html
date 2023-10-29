@@ -1,0 +1,209 @@
+<html>
+    <head>
+        <!--Web title and icon-->
+        <title>Shopping Cart | CS Society USM</title>
+        <link rel="icon" href="Images/CS-16x16.png" type="image/x-icon" sizes="16x16">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Icon Library-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <script>
+            function alertUser(msg) {
+            alert(msg);
+            }
+        </script>
+
+        <!--CSS Stylesheets-->
+        <link rel="stylesheet" href="cart.css" type="text/css">
+    </head>
+
+    <body onload="alertUser('Your cart is empty. Please add items before proceeding.')">
+        <!--Header-->
+        <div class="header">
+            <nav>
+                <a href="index.html"><img src="Images/Header.png" class="logo"></a>
+                <ul class="nav-links">
+                    <a href="cart.html"><button class="active"><i class="fa fa-shopping-cart"></i> Cart</button></a>
+                </ul>
+            </nav>
+        </div>
+
+        <!--Main Content-->
+        <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <span>We are <b>not accepting new orders</b> at this time.<br>Thank you for your support!</span>
+            </div>
+        </div>
+
+        <!--Payment Information-->
+        <div class="flex-container">
+
+            <!--Customer Information-->
+            <div class="flex-child left">
+              <h4 class="cst">Customer Information</h4>
+              <form class="cstinformation" action="">
+                <label for="fname">
+                    <h5>Full name</h5>
+                    <input type="text" id="fname" name="firstname" placeholder="Ammar Danial" required>
+                </label>
+                <label for="matricnum">
+                    <h5>Matric Number <span>(Lecturer: Leave Blank)</span></h5>
+                    <input type="text" id="matricnum" name="matricnum" placeholder="XXXXXXXX">
+                </label>
+                <label for="usmemail">
+                    <h5>Usm Email </h5>
+                    <input type="email" id="usmemail" name="usmemail" placeholder="XXXX@usm.student.my" required>
+                </label>
+                <label for="ctcnum">
+                    <h5>Contact Number</h5>
+                    <input type="text" id="ctcnum" name="ctcnum" placeholder="+60123456789" required>
+                </label>
+                <label for="gender">
+                    <h5>Gender</h5>
+                    <div class="dropdown">
+                        <select id="gender" name="yourgender" required>
+                            <option value="P">Pick One</option>
+                            <option value="M">Male</option>
+                            <option value="2">Female</option>
+                        </select>
+                    </div>
+                </label>
+                <label for="yearofstudy">
+                    <h5>Year Of Study</h5>
+                    <div class="dropdown">
+                        <select id="year" name="yearofstudy" required>
+                            <option value="P">Pick One</option>
+                            <option value="1">Year 1</option>
+                            <option value="2">Year 2</option>
+                            <option value="3">Year 3</option>
+                            <option value="4">Year 4</option>
+                            <option value="L">Lecturer</option>
+                            <option value="O">Others</option>
+                        </select>
+                    </div>
+                </label>
+                <label for="delivery">
+                    <h5>Delivery Method</h5>
+                    <div class="dropdown">
+                        <select id="delivery" name="delivery-method" required>
+                            <option value="pi">Pick One</option>
+                            <option value="P">Pick-up within USM Campus</option>
+                            <option value="E">Delivery (West Malaysia)</option>
+                            <option value="W">Delivery (East Malaysia)</option>
+                        </select>
+                    </div>
+                </label>
+                <hr>
+                <p>For any further enquires, please contact:<p>
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i><a href="https://wa.me/60136630579" target="_blank">Tan Kian Hon</a><br>
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i><a href="https://wa.me/60198211912" target="_blank">Edu Sinusi</a>
+              </form>
+            </div>
+
+            <!--Shopping Cart-->
+            <div class="flex-child right">
+            <h4 class="shp">Shopping Cart</h4>
+            <div class="items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ITEM</th>
+                            <th>QTY</th>
+                            <th>AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" class="text-right text-base">
+                                <p>Package Discount</p>
+                                <p>Delivery Fee</p>
+                                <p>Total</p>
+                            </td>
+                            <td>
+                                <p id="discount">RM 0.00</p>
+                                <p id="delivery-fee">RM 0.00</p>
+                                <p id="total">RM 0.00</p>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="qrpaymet">
+                <p style="margin-left: 35px;">For payment, please bank in the total to:</p>
+            </div>
+            <div class="paymentdetail">
+                <div class="grid grid-cols-2 gap-2">
+                    <span>Account number:</span>
+                    <span><b>151605173166</b></span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <span>Account holder name:</span>
+                    <span><b>Wong Wei Ze</b></span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <span>Bank name:</span>
+                    <span><b>Maybank</b></span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <span>Reference:</span>
+                    <span class="font-bold" style="font-weight: bold;">CSMerch
+                        <abbr title="Insert your matric card number here" class="italic cursor-help" style="font-style: italic;">MATRIC_NUM</abbr>
+                    </span>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap gap-x-8 gap-y-4 justify-center">
+                <div class="paymentreceipt">
+                    <p>Upload your <b>receipt</b> here (PDF or Image):</p>
+                    <input type="file" accept="image/jpeg, image/png, application/pdf" required disabled>
+                </div>
+                <div class="qrcode">
+                    <p>Scan For Payment:</p>
+                    <div class="cardstyle">
+                        <div class="column">
+                            <div class="qr"> <!--Qr-->
+                                <div class="content">
+                                    <img src="Images/duitnow-icon.png" alt="qricon">
+                                </div>
+                                <div class="cardbody">
+                                    <img src="Images/duitnow-qr.jpg" alt="qrcode">
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="cardbutton">
+                                <a href="#"><button class="card" disabled>CHECKOUT</button></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="Info-important3">
+            <p>** Thank you for your purchase. **</p>
+        </div>
+
+        <!--Footer-->
+        <div class="footerads">
+            <nav>
+                <div class="copyright">Copyright © 2022 - 2023 Computer Science Society, USM</div>
+                <ul class="nav-links2">
+                    <a href="https://cssocietyusm.com" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/cs.usm" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/company/cssocietyusm" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/cs.usm.my/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </ul>
+            </nav>
+        </div>
+
+
+
+
+
+
+
+
+    </body>
