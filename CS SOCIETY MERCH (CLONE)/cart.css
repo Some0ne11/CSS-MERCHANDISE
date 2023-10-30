@@ -11,7 +11,6 @@ body{
     overflow: hidden;
 }
 
-
 /* HEADER STYLE FOR WEB PAGE */
 .header{
     overflow: hidden;
@@ -60,7 +59,6 @@ nav{
     background: #FFD92D;
 }
 
-
 /* MAIN CONTENT */
 .alert{
     display: flex;
@@ -92,7 +90,6 @@ nav{
     color: white;
 }
 
-
 /* PAYMENT */
 .flex-container {
     display: flex;
@@ -106,7 +103,6 @@ nav{
 .flex-child:first-child {
     margin-right: 30px;
 }
-
 
 /* CUSTOMER INFORMATION */
 .cst{
@@ -146,7 +142,6 @@ hr{
     color: black;
 
 }
-
 
 /* SHOPPING CART */
 .shp{
@@ -178,6 +173,29 @@ table{
 }
 .paymentreceipt input{
     cursor: not-allowed;
+}
+input[type=file] {
+    margin-top: 10px;
+    width: 280px;
+    max-width: 100%;
+    color: #444;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 10px;
+    border:2px dashed #555;
+}
+input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #103f45cc;
+    padding: 8px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: not-allowed;
+    transition: background .2s ease-in-out;
+} 
+input[type=file]::file-selector-button:hover {
+    background: #F87272;
 }
 .qrcode{
     margin: 35px;
@@ -260,7 +278,3 @@ table{
      margin: 10px;
      font-size: 25px;
  }
-
-
-
- 
