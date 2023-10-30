@@ -67,7 +67,6 @@ nav{
     margin-left: 35%;
     margin-right: 35%;
     margin-bottom: 32px;
-    text-align: center;
     color:#470000;
     border-radius: 15px;
     background-color: #F87272;
@@ -75,6 +74,9 @@ nav{
     word-break: break-all;
     font-family: Roboto, system-ui, sans-serif;
     user-select: none;
+}
+.alert span{
+    position: relative;
 }
 .closebtn {
     margin-left: 5px;
