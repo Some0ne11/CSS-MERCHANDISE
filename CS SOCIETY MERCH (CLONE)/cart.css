@@ -182,7 +182,7 @@ input[type=file] {
     padding: 10px;
     background: #f1f1f1;
     border-radius: 10px;
-    border: 1px dashed #555;
+    border: 2px dashed #555;
 }
 input[type=file]::file-selector-button {
     margin-right: 20px;
